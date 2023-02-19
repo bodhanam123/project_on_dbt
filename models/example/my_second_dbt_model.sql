@@ -1,4 +1,4 @@
---test
+--test2
 -- Use the `ref` function to select from other models
 
 select *
