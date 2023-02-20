@@ -10,6 +10,10 @@ models:
             tests:
                 - unique
                 - not_null
+                - dbt_expectations.expect_column_values_to_be_between:
+                    min_value: 1
+                    max_value: 3
+                - is_even    
 
     - name: my_second_dbt_model
       description: "A starter dbt model"
@@ -19,3 +23,4 @@ models:
             tests:
                 - unique
                 - not_null
+                
