@@ -18,6 +18,8 @@ with source_data as (
     select 2 
     union all 
     select 3
+    union all 
+    select 1
 
 )
 
