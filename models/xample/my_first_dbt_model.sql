@@ -7,7 +7,7 @@
     Try changing "table" to "view" below
 */
 
-{{ config(materialized='table',database='innate-life-374205',enabled=false) }}
+{{ config(materialized='table',database='innate-life-374205') }}
 
 with source_data as (
 
