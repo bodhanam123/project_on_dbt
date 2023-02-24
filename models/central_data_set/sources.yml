@@ -15,5 +15,8 @@ sources:
       - name: nkb_placement_support_uservideosubmissionevaluation
       - name: nkb_resources_userresource
       - name: xpm_ccbp_users_master_db_view
+      - name: user_data_for_incremental_model
+      - name: placement_status_null_enum
+
 
  

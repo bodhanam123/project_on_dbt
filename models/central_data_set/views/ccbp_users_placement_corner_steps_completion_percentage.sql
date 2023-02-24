@@ -215,7 +215,7 @@ users_mock_interview_details AS (
             users_mock_interview_details.mock_interview_status,
             users_mock_interview_details.scheduled_datetime,
             users_mock_interview_details.placement_step_id
-        FROM `project-on-dbt`.`tables`.`ccbp_users_placement_corner_mock_interview_schedule_details`  AS users_mock_interview_details 
+        FROM {{ ref('ccbp_users_placement_corner_mock_interview_schedule_details') }}  AS users_mock_interview_details 
         WHERE TRUE 
         QUALIFY (
             RANK() OVER (
@@ -334,5 +334,5 @@ LEFT JOIN `users_mock_interview_details` AS users_mock_interview_details
 ON users_mock_interview_details.user_id = user_section_details.user_id 
 AND users_mock_interview_details.step_id = section_step_details.step_id
 
-LEFT JOIN `project-on-dbt`.`central_data_set`.`user_placement_status` AS users_placement_status
+LEFT JOIN {{ ref('user_placement_status') }}  AS users_placement_status
 ON user_section_details.user_id = users_placement_status.user_id

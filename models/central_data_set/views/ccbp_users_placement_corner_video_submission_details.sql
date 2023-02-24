@@ -16,7 +16,7 @@ SELECT
 
     CASE
         WHEN users_placement_status.placement_status IS NULL
-            THEN "To be Placed"
+            THEN {{ source('backend_tables', 'placement_status_null_enum') }}()
         ELSE users_placement_status.placement_status
     END AS placement_status
  

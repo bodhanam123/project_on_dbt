@@ -1,4 +1,4 @@
-{% test is_even(model, column_name) %}
+{% test is_even(model, column_name,m,n) %}
 
 with validation as (
 

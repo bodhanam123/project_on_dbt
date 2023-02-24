@@ -7,7 +7,7 @@
     Try changing "table" to "view" below
 */
 
-{{ config(materialized='table') }}
+{{ config(materialized='table',database='innate-life-374205') }}
 
 with source_data as (
 
@@ -18,6 +18,8 @@ with source_data as (
     select 2 
     union all 
     select 3
+    union all 
+    select 1
 
 )
 
