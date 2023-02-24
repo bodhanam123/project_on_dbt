@@ -1,4 +1,4 @@
-{{ config (materialized='ephemeral') }}
+{{ config (materialized='ephemeral',enabled=false) }}
 
 select *
 from {{ ref('my_first_dbt_model') }}
