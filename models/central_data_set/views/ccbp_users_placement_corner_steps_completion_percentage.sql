@@ -239,7 +239,7 @@ users_placement_corner_resource_completion_details AS (
         users_placement_resources_completion_details.step_id,
         SUM(users_placement_resources_completion_details.completion_percentage)/MAX(total_no_of_resources_in_step) AS completion_percentage,
         MAX(users_placement_resources_completion_details.completion_datetime) AS completion_datetime
-    FROM `project-on-dbt`.`tables`.`ccbp_users_placement_corner_resources_completion_details` AS users_placement_resources_completion_details 
+    FROM {{ ref('ccbp_users_placement_corner_resources_completion_details') }} AS users_placement_resources_completion_details 
     LEFT JOIN `no_of_resources_in_step_details` AS no_of_resources_in_step 
     ON no_of_resources_in_step.step_id = users_placement_resources_completion_details.step_id
     GROUP BY
