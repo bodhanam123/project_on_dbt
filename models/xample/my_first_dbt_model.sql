@@ -7,19 +7,19 @@
     Try changing "table" to "view" below
 */
 
-{{ config(materialized='table',database='innate-life-374205') }}
+{{ config(materialized='table') }}
 
 with source_data as (
 
-    select 1 as id
+    select 6 as id
     union all
-    select null as id
+    select 4 as id
     union all
-    select 2 
+    select 8 
     union all 
-    select 3
+    select 2
     union all 
-    select 1
+    select 10
 
 )
 
