@@ -35,9 +35,11 @@ models:
   my_new_project:
     marts:
       +materialized: table 
-      +schema: final_model
-    staging:
-      +schema: staging
+      +schema: marts
+    jaffle_shop:
+      +schema: jaffle_shop
+    stripe:
+      +schema: stripe
 
 
 
