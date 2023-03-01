@@ -25,7 +25,7 @@ SELECT
 
     CASE
         WHEN users_placement_status.placement_status IS NULL
-        THEN "To be Placed"
+        THEN {{placement_status_null_enum_macro()}}
         ELSE users_placement_status.placement_status
     END AS placement_status
 
