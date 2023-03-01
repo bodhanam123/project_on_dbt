@@ -2,13 +2,13 @@
 --import CTEs
 with customers as (
 
-    select * from {{ ref('stg_customers')}}
+    select * from `project-for-kt`.`dim_customers`.`stg_customers`
 
 ),
 
 orders as (
 
-    select * from {{ ref('stg_orders') }}
+    select * from `project-for-kt`.`dim_customers`.`stg_orders`
 
 ),
 --logical CTEs
