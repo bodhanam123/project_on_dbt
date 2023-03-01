@@ -1,1 +1,0 @@
-SELECT "" AS  placement_status_string,"" AS placement_status_enum
