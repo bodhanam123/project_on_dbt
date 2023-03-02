@@ -1,3 +1,3 @@
-{%- macro convert_value() -%}
-    100
-{%- endmacro -%}
+{% macro convert_value() -%}
+100
+{%- endmacro %}
