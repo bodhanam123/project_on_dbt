@@ -8,7 +8,7 @@ models:
         description: The primary key for customers.
         tests:
           - unique
-          - not_null
+          - not_null  
 
   - name: stg_orders
     description: Staged order data from our jaffle shop app.
