@@ -4,7 +4,7 @@ select
     paymentmethod as payment_method,
     status,
     -- amount is stored in cents, convert it to dollars
-    amount / 100 as amount,
+    amount / {{convert_value()}} as amount,
     created as created_at
 from `dbt-tutorial`.`stripe`.`payment`
 
