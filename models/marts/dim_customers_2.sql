@@ -11,7 +11,7 @@ orders as (
     select * from {{ ref('stg_orders') }} 
 
 ),
---logical CTEs
+--final CTEs
 customer_orders as (
 
     select
@@ -26,7 +26,6 @@ customer_orders as (
 
 ),
 
---final CTEs
 final as (
 
     select
