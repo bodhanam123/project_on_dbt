@@ -1,5 +1,5 @@
 
---import CTEs
+--import CTE
 with customers as (
 
     select * from {{ ref('stg_customers') }} 
